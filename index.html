@@ -1,18 +1,32 @@
   <!DOCTYPE html>
   <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-  </head>
-    <body>
-      <form action="#">
-        <label for="number">Enter date</label>
+     <head>
+       <meta charset="UTF-8">
+       <meta http-equiv="X-UA-Compatible" content="IE=edge">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Document</title>
+     </head>
+       <body>    
+         <form>
+           <label for="number">Enter date</label>
             <input id="number" type="date" name="date" placeholder="Enter date" min="2023-02-14" max="2023-02-20">
-        <label for="name"></label>
-        <input id="name" type="radio">
-        <textarea name="" id="" cols="30" rows="10">Розкажіть про себе</textarea>
+        <br>
+        <section>
+            <input type="tel" id="phone" name="phone"
+                 pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                  required value="Enter your phone number:">
+                 <small>Format: 123-456-7890</small>
+                 <br>
+              <input type="radio" name="btn" checked>
+              <label for="btn">Female</label>
+            </section>
+            <section>
+              <input type="radio" name="btn">
+              <label for="btn">Male</label>
+            </section>
+        </form>
+        <textarea name="" id="" cols="30" rows="10">We will be very grateful if you leave your feedback.</textarea>        
       </form>
+    </section>
     </body>
 </html>
