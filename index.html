@@ -1,12 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+    <form action="#">
+        <label for="name">Enter your name</label>
+        <input id="name" type="text" placeholder="name" minlength="4" maxlength="10" required pattern="\d"
+            minlength="15" maxlength="15">
+        <br>
+        <label for="password">Enter your password</label>
+        <input type="password" name="password" id="password" placeholder="Enter your password" min="0" maxlength="20">
+        <br>
+        <label for="numberphone">Enter your number phone</label>
+        <input type="number" name="number" id="numberphone" maxlength="10" placeholder="+38" min="0">
+    </form>
 </body>
+
 </html>
