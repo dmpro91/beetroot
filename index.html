@@ -14,82 +14,106 @@
 <form>
     <fieldset>
     <br/>
-
-    <legend>Registration</legend>
-
-    <input type = "text" 
-        placeholder="First name"
-        name="first name" 
+    <legend>Реєстрація</legend>
+   <div>
+        <label for="ПІБ">Повне ім'я</label>
+        <input type = "text"
+        placeholder="ПІБ" 
+        name="ПІБ" 
         maxlenght="20" 
         size="30"/>
-    <br/><br/>
+    </div>
+    <br>
 
-    <input type = "text" 
-        placeholder="Last name"
-        name="last name" 
-        maxlenght="20" 
-        size="30"/>
-
-    <br/><br/>
-
+<div>
+             <label for="email">Email</label>
              <input type="email"
               placeholder="email"
               name="email" 
               maxlenght="20" 
               size="30"/>
+            </div>
+    <br>
 
-    <br/><br/>
-
+<div>
+    <label for="password">Пароль</label>
     <input type="password"
-        placeholder="password"
+        placeholder="придумайте пароль"
         name="password"
         size="30"/>
+    </div>
+    <br>
 
-    <br/><br/>
+    <div>
+        <label for="password">Пароль ще раз</label>
+        <input type="password"
+            placeholder="вкажіть пароль ще раз"
+            name="password"
+            size="30"/>
+        </div>
+        <br>
+
+    <div>
+        <label for="gender">Стать</label>
+            <input type="radio"
+             name="gender"/>Чоловіча
 
             <input type="radio"
-             name="gender"/>female
+             name="gender"/>Жіноча
+    </div>
+    <br>
 
-            <input type="radio"
-             name="gender"/>male
+    <div>
+        <label for="Вік">Вік</label>
+        <input type = "text"
+        placeholder="вкажіть Ваш вік" 
+        name="Вік" 
+        maxlenght="20" 
+        size="30"/>
+    </div>
+    <br>
 
-    <br/><br/>
+<div>
+    <label for="Курс">Курс</label>
+    <input list="Курс"
+        type = "text"
+        placeholder="виберіть курс" 
+        maxlenght="20" 
+        size="30"/>
+    <datalist id="Курс">
+            <option value="Front-End">
+            <option value="Back-End">
+            <option value="Project Management">
+            <option value="QA Manual">
+        </datalist>
+    </div>
+        <br>
 
-    <input type="checkbox"
-        name="interests"/>1
-
-    <input type="checkbox"
-        name="interests"/>2
-
-    <input type="checkbox"
-        name="interests"/>3
-
-        <br/><br/>
-
-        <select>
-            <option name="1">1</option>
-            <option name="2">2</option>
-            <option name="3">3</option>
-        </select>
-
-        <br/><br/>
-
-    <textarea name="Comment"
-        placeholder="Add your comment"
-        cols="40"
-        rows="4">
+<div>
+        <label for="Адреса">Повна адреса</label>
+        <textarea name="Адреса"
+        placeholder="країна, регіон, місто/селище, вулиця"
+        cols="30"
+        rows="10">
     </textarea>
+</div>
+    <br>
 
-    <br/><br/>
-
-    <input type="submit" 
-           value="Confirm "/>
+    <div>
+        <input type="checkbox">
+        <label for="Згода">Я погоджуюся з обробкою персональних даних</label>
+    </div>
+<br>
 
            <input type="reset" 
-           value="Cancel"/>
+           value="Очистити форму">
+
+           <input type="submit" 
+           value="Зареєструватися">
     </fieldset>
 </form>
   </section>
+  
 
 </body>
 </html>
