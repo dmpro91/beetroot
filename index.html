@@ -11,76 +11,72 @@
 
   <section>
     <h2>Alina</h2>
-<form action="/action.page.php" target="_blank">
+<form action="/action.page.php" 
+      target="_blank">
+      
     <fieldset>
     <br/>
     <legend>Реєстрація</legend>
    <div>
-        <label for="ПІБ">Повне ім'я</label>
+        <label for="name">Повне ім'я</label>
         <input type = "text"
-        placeholder="ПІБ" 
-        name="ПІБ" 
-        maxlenght="20" 
-        size="30"/>
+               name="name" 
+               maxlenght="20" 
+               size="30"/>
     </div>
     <br>
 
 <div>
              <label for="email">Email</label>
              <input type="email"
-              placeholder="email"
-              name="email" 
-              maxlenght="20" 
-              size="30"/>
+                    name="email" 
+                    maxlenght="20" 
+                    size="30"/>
             </div>
     <br>
 
 <div>
     <label for="password">Пароль</label>
     <input type="password"
-        placeholder="придумайте пароль"
-        name="password"
-        size="30"/>
+           name="password"
+           size="30"/>
     </div>
     <br>
 
     <div>
         <label for="password">Пароль ще раз</label>
-        <input type="password"
-            placeholder="вкажіть пароль ще раз"
-            name="password"
-            size="30"/>
+        <input type="password" 
+               name="password"
+               size="30"/>
         </div>
         <br>
 
     <div>
         <label for="gender">Стать</label>
-            <input type="radio"
-             name checked="gender"/>Чоловіча
+        <input type="radio"
+               name checked="gender"/>Чоловіча
 
             <input type="radio"
-             name="gender"/>Жіноча
+                   name="gender"/>Жіноча
     </div>
     <br>
 
     <div>
-        <label for="Вік">Вік</label>
+        <label for="age">Вік</label>
         <input type = "text"
-        placeholder="вкажіть Ваш вік" 
-        name="Вік" 
-        maxlenght="20" 
-        size="30"/>
+               name="age" 
+               maxlenght="20" 
+               size="30"/>
     </div>
     <br>
 
 <div>
-    <label for="Курс">Курс</label>
-    <input list="Курс"
-        type = "text"
-        placeholder="виберіть курс" 
-        maxlenght="20" 
-        size="30"/>
-    <datalist id="Курс">
+    <label for="course">Курс</label>
+    <input list="course"
+           type = "text"
+           maxlenght="20" 
+           size="30"/>
+    <datalist id="course">
             <option value="Front-End">
             <option value="Back-End">
             <option value="Project Management">
@@ -90,26 +86,26 @@
         <br>
 
 <div>
-        <label for="Адреса">Повна адреса</label>
-        <textarea name="Адреса"
-        placeholder="країна, регіон, місто/селище, вулиця"
-        cols="30"
-        rows="10">
+        <label for="addresses">Повна адреса</label>
+        <textarea name="addresses"
+                  cols="30"
+                  rows="10">
     </textarea>
 </div>
     <br>
 
     <div>
         <input type="checkbox">
-        <label for="Згода">Я погоджуюся з обробкою персональних даних</label>
+        <label for="approval">Я погоджуюся з обробкою персональних даних</label>
     </div>
 <br>
-
+        <div>
            <input type="reset" 
-           value="Очистити форму">
+                  value="Очистити форму">
 
            <input type="submit" 
-           value="Зареєструватися">
+                  value="Зареєструватися">
+        </div>
     </fieldset>
 </form>
   </section>
