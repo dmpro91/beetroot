@@ -1,47 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../beetroot/styles/index.css" />
+  </head>
 
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-	<link rel="stylesheet" href="/styles/index.css">
-</head>
+  <body>
+    <div class="wrapper">
+      <header class="header-main">
+        <img src="./assets/icons/logo.svg" alt="Productly" />
+        <nav>
+          <ul class="navigation">
+            <li class="header-nav">
+              <a href="#" class="header-link">Product</a>
+            </li>
+            <li class="header-nav">
+              <a href="#" class="header-link">Customers</a>
+            </li>
+            <li class="header-nav">
+              <a href="#" class="header-link">Pricing</a>
+            </li>
+            <li class="header-nav">
+              <a href="#" class="header-link">Resources</a>
+            </li>
+          </ul>
+        </nav>
+        <ul>
+          <li class="header-but">
+            <a href="#" class="header-but-white">Sign In</a>
+          </li>
+          <li class="header-but">
+            <a href="#" class="header-but-orange">Sign Up</a>
+          </li>
+        </ul>
+      </header>
 
-<body>
-	<div class="wrapper">
+      <main>
+        <section class="hero">
+          <div class="hero-text">
+            <h1>The Design Thinking superpowers</h1>
+            <p>
+              Tools, tutorials, design and innovation experts, all in one place!
+              The most intuitive way to imagine your next user experience.
+            </p>
+            <a href="#" class="but ff-poppins">Get started</a>
+          </div>
+          <div class="hero-image">
+            <img
+              src="./assets/images/image-sect-1.png"
+              alt="The Design Thinking superpowers"
+            />
+          </div>
+        </section>
 
-		<header class="header-main">
-			<img src="/assets/icons/logo.svg" alt="Productly">
-			<nav>
-				<ul class="navigation">
-					<li class="header-nav"><a href="#" class="header-link">Product</a></li>
-					<li class="header-nav"><a href="#" class="header-link">Customers</a></li>
-					<li class="header-nav"><a href="#" class="header-link">Pricing</a></li>
-					<li class="header-nav"><a href="#" class="header-link">Resources</a></li>
-				</ul>
-			</nav>
-			<ul>
-				<li class="header-but"><a href="#" class="header-but-white">Sign In</a></li>
-				<li class="header-but"><a href="#" class="header-but-orange">Sign Up</a></li>
-			</ul>
-		</header>
+        <section></section>
 
-		<main>
+        <section></section>
 
-			<section class="hero">
-				<div class="hero-text">
-					<h1>The Design Thinking superpowers</h1>
-					<p>Tools, tutorials, design and innovation experts, all in one place! The most intuitive way to
-						imagine your
-						next user experience.</p>
-					<a href="#" class="but ff-poppins">Get started</a>
-				</div>
-				<div class="hero-image">
-					<img src="/assets/images/image-sect-1.png" alt="The Design Thinking superpowers">
-				</div>
-			</section>
+        <section></section>
 
 			<section></section>
 
@@ -72,11 +91,49 @@
 
 		</main>
 	</div>
-
+    <hr />
 	<footer>
-
+      <div class="image-container">
+        <img
+        class="productly-img"
+        src="./assets/icons/logo.svg"
+        alt="Productly"
+      />
+    </div>
+      <div class="quick-links-container">
+        <h3 class="title-quick-link-1">Quick links</h3>
+        <ul class="footer-navigation-1">
+          <li class="about-us-item"><a href="#">Abous us</a></li>
+          <li class="blog-item"><a href="#">Blog</a></li>
+          <li class="contacs-item"><a href="#">Contact</a></li>
+          <li clas="faq-item"><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="Legal-stuff-container">
+        <h3 class="footer-title-2">Legal stuff</h3>
+        <ul class="footer-navigation-2">
+          <li class="disclaimer-item"><a href="#">Disclaimer</a></li>
+          <li class="financing-item"><a href="#">Financing</a></li>
+          <li class="privacy-policy-item"><a href="#">Privacy Policy</a></li>
+          <li class="terms-of-services-item"><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+      <div class="phone-container">
+        <h3 class="footer-title-3">
+          Knowing you're always on the best energy deal
+        </h3>
+        <form action="#" method="get">
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="Enter your phone number"
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+            required
+          />
+          <button class="footer-button" type="submit">Sign up now</button>
+        </form>
+      </div>
 	</footer>
-
-</body>
-
+  </body>
 </html>
