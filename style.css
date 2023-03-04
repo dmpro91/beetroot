@@ -8,6 +8,8 @@
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 html {
@@ -15,8 +17,8 @@ html {
     font-weight: 500;
     font-size: 16px;
     line-height: 26px;
-    background: #F2F2F2;
-    color: #544837;
+    background-color: #FFFFFF;
+    color: #2F281E;
 }
 
 h1 {
@@ -34,9 +36,52 @@ h2 {
 h3 {
     font-weight: 600;
     font-size: 22px;
+    line-height: 30px;
 }
 
 h4 {
     font-weight: 700;
+}
+
+
+/*FOOTER*/
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.footer .link {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-top: 30px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.footer .input-number {
+    width: 340px;
+    height: 50px;
+    border: 1px solid #BCD0E5;
+    border-radius: 4px;
+    color: #BCD0E5;
+    padding-left: 10px;
+    margin: 25px 0;
+    cursor: pointer;
+}
+
+.footer .input-number:hover {
+    background-color: #FFFFFF;
+}
+
+.border {
+    border-top: 1px solid #BCD0E57F;
+    margin-bottom: 70px;
+    margin-top: 70px;
 }
 
