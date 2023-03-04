@@ -137,3 +137,8 @@ a {
     margin-top: 70px;
 }
 
+.main-flex {
+    display: flex;
+    flex-direction: row;
+}
+
