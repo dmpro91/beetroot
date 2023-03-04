@@ -33,16 +33,31 @@ h3 {
 h4 {
     font-weight: 700;
 }
+a{
+    text-decoration: none;
+    color: #2F281E;
+}
+
+/* Nav */
+header{
+    display: flex;
+    
+}
+a:hover{
+    color: #FF9900;
+}
 /* Features */
-.features > h2{
+.features>h2 {
     text-align: center;
 }
-.card{
+
+.card {
     margin-top: 50px;
     gap: 40px;
     display: flex;
 }
-.card-all > h3{
+
+.card-all>h3 {
     width: 270px;
     padding-top: 30px;
     padding-bottom: 16px;
