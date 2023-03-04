@@ -10,7 +10,7 @@ html {
     font-size: 16px;
     line-height: 26px;
     background: #F2F2F2;
-    color: #544837;
+    color: #2F281E;
 }
 
 h1 {
@@ -69,3 +69,17 @@ button:hover {
     height: 50px;
 }
 
+/* Features */
+.features > h2{
+    text-align: center;
+}
+.card{
+    margin-top: 50px;
+    gap: 40px;
+    display: flex;
+}
+.card-all > h3{
+    width: 270px;
+    padding-top: 30px;
+    padding-bottom: 16px;
+}
