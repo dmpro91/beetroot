@@ -20,7 +20,7 @@
    * Remove the margin in all browsers.
    */
   
-  body {
+  body, ul, ol {
     margin: 0;
   }
   
@@ -347,6 +347,11 @@
   [hidden] {
     display: none;
   }
+
+ol, ul {
+  list-style: none;
+  padding-left: 0;
+}
 
   * {
     box-sizing: border-box;
