@@ -14,37 +14,40 @@ $screen-xl-min: 1200px;
 $screen-xxl-min: 1400px;
 
 
+$max-min: "max-width";
+
+
 // Small devices
 @mixin sm {
-    @media (min-width: #{$screen-sm-min}) {
+    @media (#{$max-min}: #{$screen-sm-min}) {
         @content;
     }
  }
  
  // Medium devices
  @mixin md {
-    @media (min-width: #{$screen-md-min}) {
+    @media (#{$max-min}: #{$screen-md-min}) {
         @content;
     }
  }
  
  // Large devices
  @mixin lg {
-    @media (min-width: #{$screen-lg-min}) {
+    @media (#{$max-min}: #{$screen-lg-min}) {
         @content;
     }
  }
  
  // Extra large devices
  @mixin xl {
-    @media (min-width: #{$screen-xl-min}) {
+    @media (#{$max-min}: #{$screen-xl-min}) {
         @content;
     }
  }
  
  // For than Large device
  @mixin xxl {
-    @media (min-width: #{$screen-xxl-min}) {
+    @media (#{$max-min}: #{$screen-xxl-min}) {
         @content;
     }
  }
@@ -52,7 +55,7 @@ $screen-xxl-min: 1400px;
 
 // Custom devices
 @mixin cwd($screen) {
-    @media (min-width: $screen) {
+    @media (#{$max-min}: $screen) {
         @content;
     }
 }
