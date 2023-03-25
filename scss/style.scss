@@ -3,5 +3,12 @@
 @import "./mixins";
 @import "./responsive";
 
+html {
+  background-color: $bg-color;
+}
 
-
+.wrapper {
+  width: 100%;
+  max-width: 1248px;
+  margin: 0 auto;
+}

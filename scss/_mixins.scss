@@ -1,24 +1,8 @@
 @use "./variables";
 
-@mixin borderWithBackground($bgColor) {
-    border: 1px solid $color-red;
-    background-color: $bgColor;
-}
-
-@mixin blockFonts($size, $color, $family) {
+@mixin sansFonts($size, $font-weight, $color) {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: $font-weight;
   font-size: $size;
   color: $color;
-  font-family: $family;
-}
-
-
-@mixin corner-icon($name, $top-or-bottom, $left-or-right) {
-
-  .icon-#{$name} {
-    background-image: url("/icons/#{$name}.svg");
-    position: absolute;
-    #{$top-or-bottom}: 0;
-    #{$left-or-right}: 0;
-  }
-
 }

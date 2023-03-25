@@ -319,3 +319,13 @@ ol, ul {
 * {
   box-sizing: border-box;
 }
+
+html {
+  background-color: #FFFFFF;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1248px;
+  margin: 0 auto;
+}
