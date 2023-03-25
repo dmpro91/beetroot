@@ -3,5 +3,222 @@
 @import "./mixins";
 @import "./responsive";
 
+.wrapper {
+	max-width: 1308px;
+	padding: 0 30px;
+	margin: 0 auto;
+}
+.title {
+	@include blockFonts(40px, $color-blue, $font-family);
+	line-height: 52px;
+	font-weight: 700;
+}
+.text {
+	@include blockFonts(18px, $color-gray, $font-family);
+	font-weight: 500;
+	line-height: 29px;
+}
 
+.feachures {
+	max-width: 1118px;
+	margin: 150px auto 0;
+	&__title {
+		text-align: center;
+	}
 
+	&__text {
+		text-align: center;
+		max-width: 584px;
+		margin: 0 auto;
+	}
+}
+.block-features {
+	margin-top: 70px;
+	display: flex;
+	justify-content: start;
+	flex-wrap: wrap;
+	gap: 50px 30px;
+	@include lg {
+		display: block;
+	}
+	&__item {
+		flex: 0 0 calc(50% - 15px);
+		@include lg {
+			width: 100%;
+		}
+	}
+}
+.feachures-item {
+	display: flex;
+	justify-content: flex-end;
+	gap: 30px;
+	padding: 0 50px 0 0;
+	height: 358px;
+	background-position: right bottom;
+	background-size: 442px 358px;
+	background-repeat: no-repeat;
+
+	@include xl {
+		flex-direction: column;
+		align-items: end;
+		height: auto;
+		gap: 0;
+	}
+
+	@include lg {
+		max-width: 532px;
+		height: 358px;
+		flex-direction: row;
+		align-items: start;
+		gap: 30px;
+		margin: 50px auto 0;
+	}
+
+	@include sm {
+		flex-direction: column;
+		align-items: end;
+		height: auto;
+		gap: 0;
+		padding: 0 50px;
+		background-size: 100% auto;
+	}
+
+	@media (max-width: 460px) {
+		background-size: 100% 75%;
+	}
+
+	@media (max-width: 380px) {
+		background-size: 100% 85%;
+	}
+
+	&--one {
+		background-image: url(../scss/images/bg-1.png);
+	}
+	&--two {
+		background-image: url(../scss/images/bg-2.png);
+	}
+	&--three {
+		background-image: url(../scss/images/bg-3.png);
+	}
+	&--four {
+		background-image: url(../scss/images/bg-4.png);
+	}
+
+	&__image {
+		flex-grow: 1;
+		&--one {
+			margin-top: 73px;
+			@include xl {
+				margin-top: 0;
+			}
+			@include lg {
+				margin-top: 73px;
+			}
+			@include sm {
+				margin-top: 0;
+			}
+		}
+		&--two {
+			margin-top: 71px;
+			@include xl {
+				margin-top: 0;
+			}
+			@include lg {
+				margin-top: 71px;
+			}
+			@include sm {
+				margin-top: 0;
+			}
+		}
+		&--three {
+			margin-top: 123px;
+			@include xl {
+				margin-top: 0;
+			}
+			@include lg {
+				margin-top: 123px;
+			}
+			@include sm {
+				margin-top: 0;
+			}
+		}
+		&--four {
+			margin-top: 86px;
+			@include xl {
+				margin-top: 0;
+			}
+			@include lg {
+				margin-top: 86px;
+			}
+			@include sm {
+				margin-top: 0;
+			}
+		}
+	}
+	&__image img {
+		width: 100%;
+	}
+
+	&__text-block {
+		display: flex;
+		flex-direction: column;
+		max-width: 220px;
+		@include xl {
+			max-width: 320px;
+		}
+		@include lg {
+			max-width: 220px;
+			height: 100%;
+		}
+		@include sm {
+			max-width: 320px;
+		}
+	}
+
+	&__title {
+		@include blockFonts(24px, $color-blue, $font-family);
+		font-weight: 400;
+		line-height: 32px;
+		margin-top: 49px;
+
+		@include xl {
+			margin-top: 0;
+		}
+
+		@include lg {
+			margin-top: 49px;
+		}
+		@include sm {
+			margin-top: 0;
+		}
+	}
+
+	&__text {
+		flex-grow: 1;
+		@include blockFonts(16px, $color-gray, $font-family);
+		font-weight: 400;
+		line-height: 26px;
+		margin-top: 20px;
+	}
+
+	&__text p {
+		margin: 0;
+		height: 160px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	&__link-block {
+		margin-bottom: 33px;
+	}
+
+	&__link {
+		@include blockFonts(16px, $color-gray, $font-family);
+		font-weight: 800;
+		line-height: 26px;
+		cursor: pointer;
+		&:hover {
+			opacity: 0.5;
+		}
+	}
+}
