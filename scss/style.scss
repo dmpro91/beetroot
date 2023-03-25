@@ -3,5 +3,41 @@
 @import "./mixins";
 @import "./responsive";
 
+.section2 {
+    display: flex;
+    justify-content: center;
+}
 
+.container {
+    display: flex;
+    justify-content: center;
+    background: rgba(240, 99, 184, 0.15);
+    border-radius: 50px;
+    width: 1117px;
+    height: 560px;
+    margin-top: 49px;
 
+    .container_items {
+        margin-top: 125px;
+        margin-bottom: 125px;
+        margin-left: 62px;
+
+        &-h1 {
+            font-family: 'Helvetica';
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 130%;
+            display: flex;
+            align-items: center;
+            color: $color-blue;
+        }
+
+        &-p {
+            font-family: 'Avenir';
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 160%;
+            color: #4B5D68;
+        }
+    }
+}

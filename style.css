@@ -15,6 +15,10 @@ html {
 /**
  * Remove the margin in all browsers.
  */
+body {
+  font-family: sans-serif;
+}
+
 body, ul, ol {
   margin: 0;
 }
@@ -72,7 +76,8 @@ a {
 abbr[title] {
   border-bottom: none; /* 1 */
   text-decoration: underline; /* 2 */
-  text-decoration: underline dotted; /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -314,4 +319,40 @@ ol, ul {
 
 * {
   box-sizing: border-box;
+}
+
+.section2 {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  background: rgba(240, 99, 184, 0.15);
+  border-radius: 50px;
+  width: 1117px;
+  height: 560px;
+  margin-top: 49px;
+}
+.container .container_items {
+  margin-top: 125px;
+  margin-bottom: 125px;
+  margin-left: 62px;
+}
+.container .container_items-h1 {
+  font-family: "Helvetica";
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 130%;
+  display: flex;
+  align-items: center;
+  color: #212353;
+}
+.container .container_items-p {
+  font-family: "Avenir";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 160%;
+  color: #4B5D68;
 }
