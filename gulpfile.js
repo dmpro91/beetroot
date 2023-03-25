@@ -6,7 +6,7 @@ const notify = require("gulp-notify");
 gulp.task('sass', () => {
   return gulp.src('./scss/**/*.scss')
     .pipe(sass())
-    .on('error', function(err) {
+    .on('error', (err) => {
       notify().write(err);
       this.emit('end');
   })
