@@ -71,6 +71,14 @@
       "oO" : 1,
       "oS" : 1
     },
+    "\/README.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/README.html",
+      "oF" : 0
+    },
     "\/README.md" : {
       "cB" : 0,
       "cS" : 0,
@@ -326,7 +334,7 @@
       "prP" : 0
     },
     "\/scss\/style.scss" : {
-      "aP" : 1,
+      "aP" : 0,
       "bl" : 0,
       "co" : 0,
       "dP" : 10,
@@ -334,8 +342,8 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 0,
-      "oAP" : "\/style.css",
-      "oF" : 2,
+      "oAP" : "\/scss\/style.css",
+      "oF" : 0,
       "oS" : 0,
       "pg" : 0,
       "sct" : 0
@@ -1632,7 +1640,7 @@
     "esLintSourceType" : 0,
     "externalServerAddress" : "http:\/\/localhost:8888",
     "gitIgnoreBuildFolder" : 1,
-    "hideConfigFile" : 0,
+    "hideConfigFile" : 1,
     "jsCheckerReservedNamesString" : "",
     "languageDefaultsCOFFEE" : {
       "autoOutputAction" : 0,
