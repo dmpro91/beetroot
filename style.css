@@ -15,6 +15,10 @@ html {
 /**
  * Remove the margin in all browsers.
  */
+body {
+  font-family: sans-serif;
+}
+
 body, ul, ol {
   margin: 0;
 }
