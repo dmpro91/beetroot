@@ -197,3 +197,5 @@ $RECYCLE.BIN/
 /build
 prepros.config
 node_modules
+
+config.codekit3
