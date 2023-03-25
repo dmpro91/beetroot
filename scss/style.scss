@@ -12,3 +12,60 @@ html {
   max-width: 1248px;
   margin: 0 auto;
 }
+
+.subtitle {
+  @include sansFonts(40px, 700, $color-2);
+}
+
+.learn-more {
+  cursor: pointer;
+  @include sansFonts(18px, 900, $bg-color);
+  background-color: $color-4;
+  padding: 16px 37px;
+  border-radius: 50px;
+  border: 1px solid $color-4;
+
+  &:hover {
+    background-color: $bg-color;
+    color: $color-4;
+  }
+}
+
+.request-demo {
+  cursor: pointer;
+  @include sansFonts(16px, 900, $color-2);
+  letter-spacing: 0.005em;
+  background-color: $bg-color;
+  padding: 17px 30px;
+  border-radius: 50px;
+  border: 1px solid $bg-color;
+  box-shadow: 0 5px 5px rgba(75, 93, 104, 0.1);
+
+  .arrow {
+    padding-left: 20px;
+  }
+
+  &:hover {
+    background-color: $color-2;
+    color: $bg-color;
+  }
+}
+
+.footer {
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__leftScreen {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__rightScreen {
+      display: flex;
+      gap: 30px;
+    }
+  }
+}
