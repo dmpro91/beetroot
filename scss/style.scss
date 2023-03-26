@@ -4,11 +4,164 @@
 @import "./responsive";
 
 html {
-   background-color: $bg-color;
+  background-color: $bg-color;
+  margin: 0;
+  padding: 0;
 }
 
 .wrapper {
-   width: 100%;
-   max-width: 1248px;
-   margin: 0 auto;
+  width: 100%;
+  max-width: 1248px;
+  margin: 0 auto;
+  background-color: $bg-color;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1248px;
+  margin: 0 auto;
+}
+
+.subtitle {
+  @include sansFonts(40px, 700, $color-2);
+}
+
+.description {
+  @include sansFonts(18px, 500, $color-1);
+}
+
+.learn-more {
+  cursor: pointer;
+  @include sansFonts(18px, 900, $bg-color);
+  background-color: $color-4;
+  padding: 16px 37px;
+  border-radius: 50px;
+  border: 1px solid $color-4;
+
+  &:hover {
+    background-color: $bg-color;
+    color: $color-4;
+  }
+}
+
+.request-demo {
+  cursor: pointer;
+  @include sansFonts(16px, 900, $color-2);
+  letter-spacing: 0.005em;
+  background-color: $bg-color;
+  padding: 17px 30px;
+  border-radius: 50px;
+  border: 1px solid $bg-color;
+  box-shadow: 0 5px 5px rgba(75, 93, 104, 0.1);
+
+  .arrow {
+    padding-left: 20px;
+  }
+
+  &:hover {
+    background-color: $color-2;
+    color: $bg-color;
+  }
+}
+
+.footer {
+  padding: 0 65px;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__leftScreen {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    &__rightScreen {
+      display: flex;
+      gap: 30px;
+    }
+  }
+
+  &__main {
+    display: flex;
+    justify-content: space-between;
+    gap: 140px;
+    padding-top: 150px;
+    padding-bottom: 93px;
+
+    &__logo {
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        &__text {
+          @include sansFonts(20px, 900, $color-2);
+        }
+      }
+
+      .street {
+        @include sansFonts(16px, 500, $color-2);
+        letter-spacing: 0.01em;
+        line-height: 29px;
+        padding-top: 65px;
+        padding-bottom: 10px;
+      }
+
+      .email {
+        @include sansFonts(16px, 400, $color-2);
+        letter-spacing: 0.01em;
+        line-height: 29px;
+      }
+    }
+
+    &__section {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 50px;
+
+      .block {
+        &__title {
+          @include sansFonts(16px, 900, $color-2);
+
+          padding-bottom: 30px;
+        }
+
+        &__info {
+
+          .list {
+            @include sansFonts(16px, 400, $color-2);
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+            padding-left: 0;
+          }
+        }
+
+        &__svg {
+          cursor: pointer;
+          display: flex;
+          gap: 14px;
+
+          svg {
+            background-color: #212353;
+            border-radius: 50px;
+            opacity: .1;
+
+            &:hover {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__copyright {
+    @include sansFonts(12px, 400, $color-2);
+    letter-spacing: 0.01em;
+    line-height: 22px;
+  }
 }
