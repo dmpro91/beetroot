@@ -22,45 +22,23 @@ a {
   color: $color-1;
 }
 
-.logo {
-  margin-right: 135px;
-}
+
 
 .allheader {
   display: flex;
   align-items: center;
   margin-top: 111px;
-}
+  justify-content: space-between;
 
-.navigation a {
-  margin-right: 45px;
-  font-weight: 500;
-}
+  &__navigation a {
+    font-weight: 500;
+    margin-right: 45px;
 
-.navigation a:hover {
-  color: $color-2;
-  font-weight: 500;
-}
-
-.btn {
-  margin-left: 420px;
-}
-
-.text-header h1 {
-  color: $color-2;
-  font-weight: 700;
-  font-size: 80px;
-  max-width: 645px;
-  width: 100%;
-}
-
-.content {
-  font-size: 18px;
-  font-weight: 500;
-  max-width: 370px;
-  width: 100%;
-  color: $color-1;
-  margin-bottom: 50px;
+    &:hover {
+      color: $color-2;
+      font-weight: 600;
+    }
+  }
 }
 
 .bgimg {
@@ -69,6 +47,24 @@ a {
   background-position: right bottom;
   margin-top: 146px;
   height: 564px;
+
+  &__textheader h1 {
+    color: $color-2;
+    font-weight: 700;
+    font-size: 80px;
+    max-width: 645px;
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+  &__content {
+    font-size: 18px;
+    font-weight: 500;
+    max-width: 370px;
+    width: 100%;
+    color: $color-1;
+    margin-bottom: 50px;
+  }
 }
 
 // Button
