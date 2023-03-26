@@ -329,3 +329,92 @@ html {
   max-width: 1248px;
   margin: 0 auto;
 }
+
+.features_title {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  color: #212353;
+  line-height: 52px;
+  text-align: center;
+}
+.features_text {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: #4B5D68;
+  line-height: 29px;
+  text-align: center;
+}
+
+.features_block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.features_block_article {
+  display: flex;
+  justify-content: space-between;
+}
+.features_block_article img {
+  width: 43%;
+}
+.features_block_article.first {
+  max-width: 560px;
+  background-size: auto 100%;
+  background-image: url(../assets/img/features-picture/background.svg);
+  background-repeat: no-repeat;
+}
+.features_block_article.second {
+  max-width: 560px;
+  background-size: auto 100%;
+  background-image: url(../assets/img/features-picture/background_2.svg);
+  background-repeat: no-repeat;
+}
+.features_block_article.third {
+  max-width: 560px;
+  background-size: auto 100%;
+  background-image: url(../assets/img/features-picture/background_3.svg);
+  background-repeat: no-repeat;
+}
+.features_block_article.fourth {
+  max-width: 560px;
+  background-size: auto 100%;
+  background-image: url(../assets/img/features-picture/background_4.svg);
+  background-repeat: no-repeat;
+}
+
+/*.features_block_image {
+    width: 43%;
+}*/
+.features_block_post {
+  width: 40%;
+  padding-right: 50px;
+}
+.features_block_post .post-title {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  color: #212353;
+  font-family: "Helvetica";
+}
+.features_block_post .post-text {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #4B5D68;
+  font-family: "Avenir";
+}
+.features_block_post .post-link {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  color: #212353;
+  font-family: "Avenir";
+  text-decoration: none;
+  cursor: pointer;
+}
+.features_block_post .post-link span {
+  color: #9C69E2;
+  padding-left: 20px;
+  font-weight: 500;
+}

@@ -6,3 +6,10 @@
   font-size: $size;
   color: $color;
 }
+
+@mixin bg-image($bg-url) {
+    max-width: 560px;
+    background-size: auto 100%;
+    background-image: $bg-url;
+    background-repeat: no-repeat;
+}
