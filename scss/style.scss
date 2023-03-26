@@ -4,45 +4,73 @@
 @import "./responsive";
 
 html {
-    background-color: $bg-color;
+  background-color: $bg-color;
 }
 
 .wrapper {
-    width: 100%;
-    max-width: 1248px;
-    margin: 0 auto;
+  width: 100%;
+  max-width: 1248px;
+  margin: 0 auto;
 }
 
 // Header
 
 a {
-    text-decoration: none;
-    color: $color-1;
+  text-decoration: none;
+  color: $color-1;
 }
 
 .logo {
-    margin-right: 135px;
+  margin-right: 135px;
 }
 
 .allheader {
-    display: flex;
-    align-items: center;
-    margin-top: 111px;
+  display: flex;
+  align-items: center;
+  margin-top: 111px;
 }
 
 .navigation a {
-    margin-right: 45px;
-    font-weight: 500;
+  margin-right: 45px;
+  font-weight: 500;
 }
 
 .navigation a:hover {
-    color: $color-2;
-    font-weight: 900;
+  color: $color-2;
+  font-weight: 900;
 }
 
-.btn{
-    margin-left: 465px;
+.btn {
+  margin-left: 420px;
 }
+
+.text-header h1 {
+  color: $color-2;
+  font-weight: 700;
+  font-size: 80px;
+  max-width: 645px;
+  width: 100%;
+}
+
+.content {
+  font-size: 18px;
+  font-weight: 500;
+  max-width: 370px;
+  width: 100%;
+  color: $color-1;
+  margin-bottom: 50px;
+}
+
+.bgimg {
+  background-image: url(/assets/img/big-pictures/image1\ 1.svg);
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  margin-top: 146px;
+  height: 564px;
+}
+
+// Button
+
 .subtitle {
   @include sansFonts(40px, 700, $color-2);
 }
@@ -96,6 +124,31 @@ a {
     &__rightScreen {
       display: flex;
       gap: 30px;
+    }
+  }
+}
+
+// Responsive
+
+@media (max-width:$screen-xl-min) {
+  .btn {
+    margin-left: 200px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .request-demo {
+    cursor: pointer;
+    @include sansFonts(16px, 900, $color-2);
+    letter-spacing: 0.005em;
+    background-color: $bg-color;
+    padding: 12px 20px;
+    border-radius: 50px;
+    border: 1px solid $bg-color;
+    box-shadow: 0 5px 5px rgba(75, 93, 104, 0.1);
+
+    .arrow {
+      padding-left: 5px;
     }
   }
 }
