@@ -4,4 +4,132 @@
 @import "./responsive";
 
 
+body {
+    height: 100vh;
+}
 
+.wrapper-testimonials {
+    max-width: 100%;
+    margin: 0px auto;
+    padding: 150px 240px 0px 240px;
+
+    @include xl {
+        padding-top: 150px;
+        padding-left: 0px;
+        padding-bottom: 0px;
+        padding-right: 0px;
+        width: 100%;
+    }
+}
+
+
+.testimonials {
+    width: 100%;
+    margin: 0px auto;
+
+    @include lg {
+        text-align: center;
+    }
+
+
+    &__purpul {
+        background-color: $color-purp;
+        max-width: 1118px;
+        width: 100%;
+        min-height: 709px;
+        height: 100%;
+        display: inline-block;
+        border-radius: 50px;
+
+       
+
+        h1 {
+            font: 700 40px/52px, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: $color-wtite;
+            text-align: left;
+            padding-left: 93px;
+            margin-top: 109px;
+            margin-bottom: 85px;
+            @include sm {
+                padding-left: 0px;
+                text-align: center;
+                margin-top: 100px;
+                margin-bottom: 85px;
+                display: inline-block;
+                padding-bottom: 0px;
+            }
+
+        }
+
+        &__white {
+
+            max-width: 645px;
+            width: 57.7%;
+            min-height: 330px;
+            height: 46.5%;
+            display: flex;
+            margin: 0px auto;
+            background: $color-wtite;
+            border-radius: 20px;
+            box-shadow: 0px 20px 0px rgba(149, 93, 227, 0.3);
+            padding: 60px 70px 50px 70px;
+           
+            @include md {
+                width: 100%;
+                max-width: 100%;
+
+            }
+
+        }
+    }
+
+}
+
+.content {
+    display: flex;
+
+    @include lg {
+        flex-direction: column;
+        align-items: center;
+        margin: 0px auto;
+        margin: 0px;
+    }
+
+    img {
+        width: 90px;
+        height: 90px;
+
+        @include lg {
+            margin: 0px auto;
+        }
+    }
+
+    &__text {
+        padding-left: 30px;
+        padding-top: 20px;
+
+        @include lg {
+            padding: 0px;
+        }
+
+        &__1 {
+            font: 900 18px/29px, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: $color-blue;
+            margin-bottom: 0px;
+
+        }
+
+        &__2 {
+            font: 500 14px/22px, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: $color-purp;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+
+        &__3 {
+            font: 400 18px/32px, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: $color-gray;
+        }
+    }
+
+}
