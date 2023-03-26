@@ -3,6 +3,106 @@
 @import "./mixins";
 @import "./responsive";
 
+.section2 {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    background: rgba(240, 99, 184, 0.15);
+    border-radius: 50px;
+    max-width: 1117px;
+    margin-top: 49px;
+
+    @media screen and (max-width: 1200px) {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    @media screen and (max-width: 320px) {
+        width: 300px;
+    }
+
+    @media screen and (max-width: 809px) {
+        flex-direction: column;
+    }
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+    }
+
+    @media screen and (max-width: 500px) {}
+
+    .container-img {
+        max-width: 477px;
+        max-height: 504px;
+
+        @media screen and (max-width: 1061px) {
+            max-width: 450px;
+        }
+
+        @media screen and (max-width: 1061px) {
+            max-width: 440px;
+        }
+
+        @media screen and (max-width: 1025px) {
+            max-width: 430px;
+        }
+
+        @media screen and (max-width: 992px) {
+            max-width: 380px;
+        }
+
+        @media screen and (max-width: 992px) {
+            max-width: 350px;
+        }
+
+        @media screen and (max-width: 375px) {
+            max-width: 310px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        @media screen and (max-width: 345px) {
+            max-width: 305px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+    }
+
+    .container_items {
+        margin-top: 125px;
+        margin-bottom: 125px;
+        margin-left: 62px;
+        margin-right: 90px;
+
+        @media screen and (max-width: 1200px) {
+            margin-left: 32px;
+        }
+
+        @media screen and (max-width: 1070px) {
+            margin-top: 90px;
+        }
+
+        @media screen and (max-width: 1010px) {
+            margin-bottom: 80px;
+        }
+
+        @media screen and (max-width: 320px) {
+            margin-top: 0;
+            margin-right: 10px;
+            margin-left: 10px;
+            margin-bottom: 20px;
+        }
+
+        @media screen and (max-width: 576px) {
+            margin-top: 0;
+            margin-right: 20px;
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
 
 body {
     height: 100vh;
@@ -29,6 +129,8 @@ body {
 
     @include lg {
         text-align: center;
+    } 
+
     }
 
 
@@ -41,95 +143,3 @@ body {
         display: inline-block;
         border-radius: 50px;
 
-       
-
-        h1 {
-            font: 700 40px/52px, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            color: $color-wtite;
-            text-align: left;
-            padding-left: 93px;
-            margin-top: 109px;
-            margin-bottom: 85px;
-            @include sm {
-                padding-left: 0px;
-                text-align: center;
-                margin-top: 100px;
-                margin-bottom: 85px;
-                display: inline-block;
-                padding-bottom: 0px;
-            }
-
-        }
-
-        &__white {
-
-            max-width: 645px;
-            width: 57.7%;
-            min-height: 330px;
-            height: 46.5%;
-            display: flex;
-            margin: 0px auto;
-            background: $color-wtite;
-            border-radius: 20px;
-            box-shadow: 0px 20px 0px rgba(149, 93, 227, 0.3);
-            padding: 60px 70px 50px 70px;
-           
-            @include md {
-                width: 100%;
-                max-width: 100%;
-
-            }
-
-        }
-    }
-
-}
-
-.content {
-    display: flex;
-
-    @include lg {
-        flex-direction: column;
-        align-items: center;
-        margin: 0px auto;
-        margin: 0px;
-    }
-
-    img {
-        width: 90px;
-        height: 90px;
-
-        @include lg {
-            margin: 0px auto;
-        }
-    }
-
-    &__text {
-        padding-left: 30px;
-        padding-top: 20px;
-
-        @include lg {
-            padding: 0px;
-        }
-
-        &__1 {
-            font: 900 18px/29px, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            color: $color-blue;
-            margin-bottom: 0px;
-
-        }
-
-        &__2 {
-            font: 500 14px/22px, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            color: $color-purp;
-            margin-top: 0px;
-            margin-bottom: 0px;
-        }
-
-        &__3 {
-            font: 400 18px/32px, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            color: $color-gray;
-        }
-    }
-
-}
