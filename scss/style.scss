@@ -91,6 +91,8 @@ a {
 
   &:hover {
     background-color: $bg-color;
+    box-shadow: 0 5px 5px rgba(75, 93, 104, 0.1);
+    border: 1px solid $bg-color;
     color: $color-4;
   }
 }
@@ -115,8 +117,20 @@ a {
   }
 }
 
+
+.border-top {
+  border-top: 2px solid $color-3;
+  opacity: 0.2;
+  padding-bottom: 100px;
+}
+
+
 .footer {
   padding: 0 65px;
+
+  @include xxl {
+    padding: 0 242px;
+  }
 
   &__header {
     display: flex;
@@ -141,6 +155,7 @@ a {
     gap: 140px;
     padding-top: 150px;
     padding-bottom: 93px;
+    padding-right: 35px;
 
     &__logo {
       .logo {
@@ -159,12 +174,24 @@ a {
         line-height: 29px;
         padding-top: 65px;
         padding-bottom: 10px;
+
+        a {
+          &:hover {
+            color: rgba(33, 35, 83, .5);
+          }
+        }
       }
 
       .email {
         @include sansFonts(16px, 400, $color-2);
         letter-spacing: 0.01em;
         line-height: 29px;
+
+        a {
+          &:hover {
+            color: rgba(33, 35, 83, .5);
+          }
+        }
       }
     }
 
@@ -188,6 +215,14 @@ a {
             flex-direction: column;
             gap: 28px;
             padding-left: 0;
+
+            &__item {
+              &__link {
+                &:hover {
+                  color: rgba(33, 35, 83, .5);
+                }
+              }
+            }
           }
         }
 
@@ -217,11 +252,12 @@ a {
   }
 }
 
+
 // Responsive
 
-@media (max-width:$screen-xl-min) {
+@media (max-width: $screen-xl-min) {
   .btn {
-    margin-left: 200px;
+    //margin-left: 200px;
   }
 }
 
