@@ -5,6 +5,8 @@
 
 html {
   background-color: $bg-color;
+  margin: 0;
+  padding: 0;
 }
 
 .wrapper {
@@ -84,4 +86,375 @@ html {
             font-weight: 500;
         }
     }
+// Header
+
+a {
+  text-decoration: none;
+  color: $color-1;
+}
+
+.logo {
+  margin-right: 135px;
+}
+
+.allheader {
+  display: flex;
+  align-items: center;
+  margin-top: 111px;
+}
+
+.navigation a {
+  margin-right: 45px;
+  font-weight: 500;
+}
+
+.navigation a:hover {
+  color: $color-2;
+  font-weight: 500;
+}
+
+.btn {
+  margin-left: 420px;
+}
+
+.text-header h1 {
+  color: $color-2;
+  font-weight: 700;
+  font-size: 80px;
+  max-width: 645px;
+  width: 100%;
+}
+
+.content {
+  font-size: 18px;
+  font-weight: 500;
+  max-width: 370px;
+  width: 100%;
+  color: $color-1;
+  margin-bottom: 50px;
+}
+
+.bgimg {
+  background-image: url(./assets/img/big-pictures/image1.svg);
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  margin-top: 146px;
+  height: 564px;
+}
+
+// Button
+
+.subtitle {
+  @include sansFonts(40px, 700, $color-2);
+}
+
+.description {
+  @include sansFonts(18px, 500, $color-1);
+}
+
+.learn-more {
+  cursor: pointer;
+  @include sansFonts(18px, 900, $bg-color);
+  background-color: $color-4;
+  padding: 16px 37px;
+  border-radius: 50px;
+  border: 1px solid $color-4;
+
+  &:hover {
+    background-color: $bg-color;
+    box-shadow: 0 5px 5px rgba(75, 93, 104, 0.1);
+    border: 1px solid $bg-color;
+    color: $color-4;
+  }
+}
+
+.request-demo {
+  cursor: pointer;
+  @include sansFonts(16px, 900, $color-2);
+  letter-spacing: 0.005em;
+  background-color: $bg-color;
+  padding: 17px 30px;
+  border-radius: 50px;
+  border: 1px solid $bg-color;
+  box-shadow: 0 5px 5px rgba(75, 93, 104, 0.1);
+
+  .arrow {
+    padding-left: 20px;
+  }
+
+  &:hover {
+    background-color: $color-2;
+    color: $bg-color;
+  }
+}
+
+
+.border-top {
+  border-top: 2px solid $color-3;
+  opacity: 0.2;
+  padding-bottom: 100px;
+}
+
+
+.footer {
+  padding: 0 65px;
+
+  @include xxl {
+    padding: 0 242px;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__leftScreen {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    &__rightScreen {
+      display: flex;
+      gap: 30px;
+    }
+  }
+
+  &__main {
+    display: flex;
+    justify-content: space-between;
+    gap: 140px;
+    padding-top: 150px;
+    padding-bottom: 93px;
+    padding-right: 35px;
+
+    &__logo {
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        &__text {
+          @include sansFonts(20px, 900, $color-2);
+        }
+      }
+
+      .street {
+        @include sansFonts(16px, 500, $color-2);
+        letter-spacing: 0.01em;
+        line-height: 29px;
+        padding-top: 65px;
+        padding-bottom: 10px;
+
+        a {
+          &:hover {
+            color: rgba(33, 35, 83, .5);
+          }
+        }
+      }
+
+      .email {
+        @include sansFonts(16px, 400, $color-2);
+        letter-spacing: 0.01em;
+        line-height: 29px;
+
+        a {
+          &:hover {
+            color: rgba(33, 35, 83, .5);
+          }
+        }
+      }
+    }
+
+    &__section {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 50px;
+
+      .block {
+        &__title {
+          @include sansFonts(16px, 900, $color-2);
+
+          padding-bottom: 30px;
+        }
+
+        &__info {
+
+          .list {
+            @include sansFonts(16px, 400, $color-2);
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+            padding-left: 0;
+
+            &__item {
+              &__link {
+                &:hover {
+                  color: rgba(33, 35, 83, .5);
+                }
+              }
+            }
+          }
+        }
+
+        &__svg {
+          cursor: pointer;
+          display: flex;
+          gap: 14px;
+
+          svg {
+            background-color: #212353;
+            border-radius: 50px;
+            opacity: .1;
+
+            &:hover {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__copyright {
+    @include sansFonts(12px, 400, $color-2);
+    letter-spacing: 0.01em;
+    line-height: 22px;
+  }
+}
+
+
+// Responsive
+
+@media (max-width: $screen-xl-min) {
+  .btn {
+    //margin-left: 200px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .request-demo {
+    cursor: pointer;
+    @include sansFonts(16px, 900, $color-2);
+    letter-spacing: 0.005em;
+    background-color: $bg-color;
+    padding: 12px 20px;
+    border-radius: 50px;
+    border: 1px solid $bg-color;
+    box-shadow: 0 5px 5px rgba(75, 93, 104, 0.1);
+
+    .arrow {
+      padding-left: 5px;
+    }
+  }
+}
+
+
+.section--text {
+  @include sansFonts(18px, 400px, $color-1);
+}
+
+.testimonials {
+  max-width: 1118px;
+  margin: 0 auto;
+  margin-top: 150px;
+  margin-bottom: 150px;
+  background-color: $color-3;
+  border-radius: 50px;
+  height: auto;
+  padding-top: 110px;
+  padding-left: 95px;
+  padding-right: 95px;
+  padding-bottom: 135px;
+
+  @include md {
+    padding-top: 80px;
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-bottom: 100px;
+  }
+
+  @include sm {
+    padding-top: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 70px;
+  }
+
+  .testimonials__title {
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    color: #FFFFFF;
+    margin-bottom: 85px;
+
+    @include md {
+      margin-bottom: 70px;
+    }
+
+    @include sm {
+      margin-bottom: 50px;
+      text-align: center;
+    }
+  }
+
+  .testimonials__content {
+    max-width: 645px;
+    height: auto;
+    margin: 0px auto;
+    background-color: #FFFFFF;
+    display: flex;
+    gap: 30px;
+    padding: 60px 70px 50px 70px;
+
+    @include md {
+      padding: 50px 50px 40px 50px;
+    }
+
+    @include sm {
+      padding: 30px 20px 20px 20px;
+    }
+
+    border-radius: 20px;
+    box-shadow: 0px 15px 5px 0px #8d59d6;
+
+    .testimonials__content__left {
+      width: 90px;
+
+      .testi--photo {
+        transform: scale(2);
+
+        @include md {
+          transform: scale(2);
+        }
+
+        @include sm {
+          transform: scale(2);
+        }
+      }
+    }
+  }
+
+  .testimonials__content__right {
+    &__title {
+      font-weight: 900;
+      font-size: 18px;
+      color: $color-2;
+    }
+
+    &__tag {
+      font-weight: 500;
+      font-size: 14px;
+      color: $color-3;
+      margin-bottom: 20px;
+    }
+
+    &__text {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 180%;
+    }
+  }
+
 }
