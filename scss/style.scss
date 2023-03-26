@@ -1,3 +1,4 @@
+@import "./reset";
 @import "./variables";
 @import "./mixins";
 @import "./responsive";
@@ -6,13 +7,6 @@ html {
   background-color: $bg-color;
   margin: 0;
   padding: 0;
-}
-
-.wrapper {
-  width: 100%;
-  max-width: 1248px;
-  margin: 0 auto;
-  background-color: $bg-color;
 }
 
 .wrapper {
