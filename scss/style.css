@@ -514,7 +514,7 @@ ol, ul {
   text-decoration: none;
   font-size: 16px;
   line-height: 25.6px;
-  color: #4b5d68;
+  color: #4B5D68;
 }
 .footer__navigation-link:hover {
   color: #9C69E2;
@@ -545,6 +545,7 @@ ol, ul {
   width: 18px;
   height: 18px;
   padding: 16px;
+  display: block;
 }
 .footer__end-text {
   font-size: 12px;
