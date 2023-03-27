@@ -324,45 +324,19 @@ a {
   color: #4B5D68;
 }
 
-.logo {
-  margin-right: 135px;
-}
-
 .allheader {
   display: flex;
   align-items: center;
   margin-top: 111px;
+  justify-content: space-between;
 }
-
-.navigation a {
+.allheader__navigation a {
+  font-weight: 500;
   margin-right: 45px;
-  font-weight: 500;
 }
-
-.navigation a:hover {
+.allheader__navigation a:hover {
   color: #292b4f;
-  font-weight: 500;
-}
-
-.btn {
-  margin-left: 420px;
-}
-
-.text-header h1 {
-  color: #292b4f;
-  font-weight: 700;
-  font-size: 80px;
-  max-width: 645px;
-  width: 100%;
-}
-
-.content {
-  font-size: 18px;
-  font-weight: 500;
-  max-width: 370px;
-  width: 100%;
-  color: #4B5D68;
-  margin-bottom: 50px;
+  font-weight: 600;
 }
 
 .bgimg {
@@ -371,6 +345,22 @@ a {
   background-position: right bottom;
   margin-top: 146px;
   height: 564px;
+}
+.bgimg__textheader h1 {
+  color: #292b4f;
+  font-weight: 700;
+  font-size: 80px;
+  max-width: 645px;
+  width: 100%;
+  margin-bottom: 50px;
+}
+.bgimg__content {
+  font-size: 18px;
+  font-weight: 500;
+  max-width: 370px;
+  width: 100%;
+  color: #4B5D68;
+  margin-bottom: 50px;
 }
 
 .subtitle {
@@ -599,7 +589,7 @@ a {
   }
 }
 .testimonials .testimonials__title {
-  font-family: "Helvetica";
+  font-family: "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 40px;
@@ -620,13 +610,13 @@ a {
 .testimonials .testimonials__content {
   max-width: 645px;
   height: auto;
-  margin: 0px auto;
+  margin: 0 auto;
   background-color: #FFFFFF;
   display: flex;
   gap: 30px;
   padding: 60px 70px 50px 70px;
   border-radius: 20px;
-  box-shadow: 0px 15px 5px 0px #8d59d6;
+  box-shadow: 0 15px 5px 0 #8d59d6;
 }
 @media (max-width: 768px) {
   .testimonials .testimonials__content {
