@@ -22,3 +22,37 @@
   }
 
 }
+
+@mixin button {
+  width: 210px;
+  height: 60px;
+  border-radius: 50px;
+  cursor: pointer;
+  -webkit-box-shadow: 5px 5px 5px -2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 5px 5px 5px -2px rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 5px 5px -2px rgba(0, 0, 0, 0.2);
+  @media screen and (max-width: 1024px) {
+    width: 180px;
+  }
+  @media screen and (max-width: 480px) {
+    width: 170px;
+    height: 55px;
+  }
+}
+
+@mixin button-pink-violet {
+  font-size: 18px;
+  line-height: 28.8px;
+  color: $color-white;
+  border: none;
+  cursor: pointer;
+}
+
+@mixin socials-bg-hover {
+  background-color: $color-white;
+  width: 48px;
+  height: 48px;
+  filter: $color-gray;
+  transition: width 2s, height 4s;
+}
+

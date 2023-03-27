@@ -4,9 +4,10 @@
 @import "./responsive";
 
 .wrapper {
+
     max-width: 1248px;
     margin: 0 auto;
-    padding: 0 8%;
+    // padding: 0 8%;
         
     @include xl {
             max-width: 1000px;
@@ -25,8 +26,21 @@
 
         // }
         
+
+  width: 80%;
+  margin: 0 auto;
+  @media screen and (max-width: 1200px) {
+    width: 95%;
+  }
 }
 
+.title {
+  font-size: 40px;
+  color: $color-blue;
+  line-height: 52px;
+  font-family: $font-family;
+  font-weight: 700;
+}
 
 header {
     display: flex;
@@ -478,4 +492,284 @@ body {
         }
     }
 
+}
+.subtitle {
+  font-size: 16px;
+  line-height: 25.6px;
+  color: $color-blue;
+  font-weight: 600;
+    padding-bottom: 20px;
+}
+
+.button {
+  @include button;
+  border: 1px solid $color-purp;
+  background-color: $color-white;
+  color: $color-blue;
+  font-size: 16px;
+  letter-spacing: 0.005em;
+  line-height: 25px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+  &:hover {
+    background-color: $color-purp;
+    color: $color-white;
+  }
+}
+
+.button-violet {
+  @include button;
+  @include button-pink-violet;
+  background-color: $color-purp;
+
+  &:hover {
+    background-color: $color-purp;
+  }
+}
+
+.button-pink {
+  @include button;
+  @include button-pink-violet;
+  background-color: $color-pink;
+
+  &:hover {
+    background-color: $back-color;
+  }
+}
+
+.icon-arrow {
+  width: 20px;
+  height: 20px;
+  fill: $color-purp;
+  stroke: $color-purp;
+}
+
+.button:hover .icon-arrow {
+  fill: $color-white;
+  stroke: $color-white;
+ 
+}
+
+.footer {
+  margin: 120px 0;
+  &__heading {
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &-button {
+      display: flex;
+      gap: 30px;
+    }
+  }
+
+  .text {
+    padding-top: 20px;
+    font-size: 18px;
+  color: $color-gray;
+  line-height: 28.8px;
+  }
+
+  &__block {
+    display: flex;
+    gap: 225px;
+    padding: 100px 0;
+  }
+
+  &__info {
+    &-name {
+      font-size: 20px;
+      font-weight: 600;
+      color: $color-blue;
+      line-height: 32px;
+      padding-left: 20px;
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding-top: 60px;
+    }
+
+    &-adress {
+      text-decoration: none;
+      font-size: 16px;
+      line-height: 28.8px;
+      letter-spacing: 0.01em;
+      color: $color-blue;
+    }
+
+    &-personal {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 28.8px;
+      letter-spacing: 0.01em;
+      color: $color-blue;
+      text-decoration: none;
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    gap: 169px;
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    &-link {
+      text-decoration: none;
+      font-size: 16px;
+      line-height: 25.6px;
+      color: $color-gray;
+
+      &:hover {
+        color: $color-purp;
+      }
+    }
+  }
+  &__socials {
+    &-block {
+      display: flex;
+      flex-direction: row;
+      gap: 15px;
+    }
+
+    &-bg {
+      background-color: $icon-back;
+      border-radius: 50px;
+      width: 50px;
+      height: 50px;
+
+      &--dark {
+        &:hover {
+          @include socials-bg-hover;
+          filter: none; 
+        }
+
+        &:hover .footer__socials-icon--dark {
+          filter: $color-gray;
+        }
+      }
+    }
+
+    &-icon {
+      width: 18px;
+      height: 18px;
+      padding: 16px;
+      display: block;
+    }
+  }
+
+  &__end-text {
+    font-size: 12px;
+    font-weight: 300;
+    color: $color-blue;
+    letter-spacing: 0.01em;
+    line-height: 21.6px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .footer {
+    margin-bottom: 90px;
+
+    &__block {
+      gap: 140px;
+      padding-bottom: 60px;
+    }
+
+    &__navigation {
+      flex-wrap: wrap;
+      gap: 50px 100px;
+      width: 300px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 35px;
+  }
+
+  .footer {
+    &__heading {
+      height: 140px;
+
+      &-button {
+        flex-wrap: wrap;
+        justify-content: end;
+        gap: 15px;
+      }
+    }
+
+    &__block {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 70px;
+    }
+
+    &__info {
+      text-align: center;
+
+      &-list {
+        padding-top: 40px;
+      }
+    }
+
+    &__navigation {
+      gap: 40px 90px;
+      width: 250px;
+      text-align: center;
+    }
+
+    &__socials {
+      padding-left: 30px;
+    }
+
+    &__end-text {
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .text {
+    font-size: 16px;
+  }
+
+  .title {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .footer {
+    &__heading {
+      flex-wrap: wrap;
+      height: auto;
+      justify-content: center;
+      display: flex;
+
+      &-button {
+        justify-content: center;
+      }
+
+      &-title {
+        text-align: center;
+        padding-bottom: 30px;
+      }
+    }
+
+    &__block {
+      padding: 70px 0;
+    }
+  }
 }
