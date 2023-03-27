@@ -283,6 +283,7 @@ a {
   @include sansFonts(18px, 400px, $color-1);
 }
 
+
 .testimonials {
   max-width: 1118px;
   margin: 0 auto;
@@ -311,7 +312,7 @@ a {
   }
 
   .testimonials__title {
-    font-family: 'Helvetica';
+    font-family: 'Helvetica', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 40px;
@@ -331,7 +332,7 @@ a {
   .testimonials__content {
     max-width: 645px;
     height: auto;
-    margin: 0px auto;
+    margin: 0 auto;
     background-color: #FFFFFF;
     display: flex;
     gap: 30px;
@@ -346,7 +347,7 @@ a {
     }
 
     border-radius: 20px;
-    box-shadow: 0px 15px 5px 0px #8d59d6;
+    box-shadow: 0 15px 5px 0 #8d59d6;
 
     .testimonials__content__left {
       width: 90px;
