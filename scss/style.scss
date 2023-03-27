@@ -15,6 +15,167 @@ html {
   margin: 0 auto;
 }
 
+//Features
+.features {        
+    margin-top: 150px; //перевірити чи не задвоюється
+    margin-bottom: 150px;
+    
+    &_title {
+        @include sansFonts(40px, 700, $color-2);
+            line-height: 52px;
+            text-align: center;
+            margin-bottom: 50px;
+
+            //responsive: 576
+                @include sm {
+                    margin-bottom: 25px;
+                }
+        }
+    &_text {
+        @include sansFonts(18px, 500, $color-1);
+        max-width: 584px;
+        line-height: 29px;  
+        text-align: center;
+        margin: 0 auto 100px;
+
+    //responsive: 992
+        @include lg {
+            margin-bottom: 50px;
+        }
+    //responsive: 576
+        @include sm {
+            margin-bottom: 15px;
+        }
+    }
+}
+
+.features_block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 50px;
+    column-gap: 47px;
+
+    //responsive: 992
+    @include lg {
+        display: block;
+    }
+
+    &_article {
+        display: flex;
+        justify-content: space-between;
+        background-position-x: right;
+        padding-top: 49px;
+        padding-bottom: 33px;
+        max-width: 560px;
+        min-height: 358px;
+        
+        //responsive: 992
+        @include lg {
+            width: 80%;
+            max-width: fit-content;
+            margin: 0 auto 30px;
+            min-height: auto;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            }
+        //responsive: 576px
+        @include sm {
+            width: 90%;
+            display: block;
+            text-align: center;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            min-height: auto;
+        }
+
+        img {
+            width: 43%;
+
+            //responsive: 992
+            @include lg {                  
+                width: auto;  
+                margin: 0 0 30px auto;
+                }
+            //responsive: 576px
+            @include sm {
+                    width: 50%;
+                }
+        }
+
+        &.first {
+            @include bg-image(url(../assets/img/features-picture/background.svg));
+        }
+
+        &.second {
+            @include bg-image(url(../assets/img/features-picture/background_2.svg));            
+        }
+
+        &.third {
+            @include bg-image(url(../assets/img/features-picture/background_3.svg));
+        }
+
+        &.fourth {
+            @include bg-image(url(../assets/img/features-picture/background_4.svg));
+        }        
+    }
+}
+
+.features_block_post {
+    width: 48%;
+    padding-right: 50px;    
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    
+    //responsive: 768px
+        @include md {
+            padding-right: 15px;
+            width: 55%;
+        }
+    //responsive: 576px
+        @include sm {
+            width: 80%;
+            margin: 0 auto;
+            padding-right: 0;            
+        }
+
+    .post-title {
+        @include sansFonts(24px, 400, $color-2);
+        font-family: 'Helvetica';
+        margin-bottom: 20px;
+        cursor: pointer;
+        //responsive: 576px
+        @include sm {
+            font-size: 20px;           
+        }
+    }
+    .post-text {
+        @include sansFonts(16px, 400, $color-1);
+        font-family: 'Avenir';
+        line-height: 26px;
+        margin-bottom: 20px;
+
+        //responsive: 576px
+        @include sm {
+            margin-bottom: 0;
+            }
+    }
+    .post-link {
+        @include sansFonts(16px, 800, $color-2);
+        font-family: 'Avenir';
+        text-decoration: none;
+        cursor: pointer;
+        
+        span {
+            color: $color-3;
+            padding-left: 20px;
+            font-weight: 500;
+        }
+    }
+}
+
+//Features - the end
+
+
 // Header
 
 a {
