@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="scss/style.css">
     <title>Document</title>
 </head>
 <body>
@@ -29,6 +29,34 @@
                 </ul>
             </nav>
             <div class="navbar__btn"><button class="navbar__btn"> Request Demo</button></div>
+            <div class="hamburger">
+                <span class="header-hamburger-bar"></span>
+                <span class="header-hamburger-bar"></span>
+                <span class="header-hamburger-bar"></span>
+            </div>
+            
+            <script>
+                const hamburger = document.querySelector(".hamburger");
+                const navMenu = document.querySelector(".navbar");
+              
+              hamburger.addEventListener("click", mobileMenu);
+              
+              function mobileMenu() {
+                  hamburger.classList.toggle("active");
+                  navMenu.classList.toggle("active");
+              }
+              
+              
+              const navLink = document.querySelectorAll(".navlink");
+              
+              navLink.forEach(n => n.addEventListener("click", closeMenu));
+              
+              function closeMenu() {
+                  hamburger.classList.remove("active");
+                  navMenu.classList.remove("active");
+              }
+              </script>
+            
         </header>
         <main class="wrapper">
             <section class="fs">

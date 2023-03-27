@@ -3,6 +3,7 @@
 @import "./mixins";
 @import "./responsive";
 
+
 .wrapper {
     max-width: 1248px;
     margin: 0 auto;
@@ -30,12 +31,18 @@
 
 header {
     display: flex;
-    height: 200px;
+    min-height: 200px;
     justify-content: space-between;
     align-items: center;
      
     .navbar {
         display: inline-flex;
+        @include md {
+            display: none;
+        }
+        @include sm {
+            display: none;
+        }   
 
         &__link{
             text-decoration: none;
@@ -46,15 +53,7 @@ header {
             @include xl {
                 padding-left: 40px ;  
             }
-            @include lg {
-                padding-left: 35px ;  
-            }
-            @include md {
-                display: none; 
-            }
-            @include sm {
-               display: none; 
-            }   
+
          }
          &__link:hover {
             opacity: 0.7;
@@ -81,9 +80,67 @@ header {
                 width: 170px;
             }
         }
+
+        li{
+            @include lg {
+                padding-left: 35px ;  
+            }
+            @include md {
+                margin-bottom: 15px;           
+             }
+        }
    
     }
 }
+.header-hamburger-bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+}
+
+.navbar.active {
+    position: relative;
+    z-index: 8;
+    background-color: white;
+    left: 0;
+    top: 130px;
+    @include md {
+        display: block;
+    }
+    @include sm {
+        display: block;
+    }  
+}
+
+.hamburger {
+    display: none;
+    margin-left: 15px;
+    cursor: pointer;
+
+    @include md {
+            display: block;
+    }
+    @include sm {
+        display: block; 
+     }   
+}
+
+.hamburger.active .header-hamburger-bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .header-hamburger-bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .header-hamburger-bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
 
 .fs {
     height: 630px;
