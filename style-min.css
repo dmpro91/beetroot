@@ -76,6 +76,7 @@ a {
 abbr[title] {
   border-bottom: none; /* 1 */
   text-decoration: underline; /* 2 */
+  -webkit-text-decoration: underline dotted;
   text-decoration: underline dotted; /* 2 */
 }
 
@@ -391,8 +392,6 @@ header .navbar__btn {
   width: 234px;
   height: 56px;
   color: #FFFFFF;
-  -webkit-box-shadow: 5px 5px 5px -2px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 5px 5px 5px -2px rgba(0, 0, 0, 0.2);
   box-shadow: 5px 5px 5px -2px rgba(0, 0, 0, 0.2);
 }
 @media (max-width: 1200px) {
