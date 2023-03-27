@@ -7,80 +7,205 @@
     <link rel="stylesheet" href="./scss/style.css">
     <title>Document</title>
 </head>
+
 <body>
-    <body>
-        <header class="wrapper">
-            <img src="/scss/images/Logo.svg" alt="logo">
-            <nav>
-                <ul class="navbar">
-                    <li>
-                        <a href="#" class="navbar__link">About</a>
-                    </li>
-                    <li>
-                        <a href="#Help" class="navbar__link">Help</a>
-                    </li>
-                    <li>
-                        <a href="#Features" class="navbar__link">Features</a>
-                    </li>
-                    <li>
-                        <a href="#signup" class="navbar__link" >Signup</a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="navbar__btn"><button class="navbar__btn"> Request Demo</button></div>
-        </header>
-        <main class="wrapper">
-            <section class="fs">
-                <img src="/scss/images/fs-1.svg" alt="bg-image" class="fs__img">
-                <h1 class="fs__title">Save your data storage here.</h1>
-                <p class="fs__text">
-                    Data Warehouse is a data storage area that has been tested for security, so you can store your data here safely but not be afraid of being stolen by others.
-                </p>
-                <button class="fs__btn">Load More</button>
-            </section>
-        </main>
-        <section class="section2">
-            <div class="container">
-                <img class="container-img" src="./scss/images/image2.svg" alt="">
-                <div class="container_items">
-                    <h1 class="container_items-h1">We are a high-level
-                        data
-                        storage bank</h1>
-                    <p class="container_items-p">The place to store various data that you can access at any time through the
-                        internet and where you can carry it.
-                        This very flexible storage area has a high level of security. To enter into your own data you must
-                        enter the password that you created when you registered in this Data Warehouse. </p>
-                </div>
-            </div>
-        </section>
-    </body>
-    <div class="wrapper-testimonials">
-<section class="testimonials">
-    <div class="testimonials__purpul">
-        <h1 class="testimonials__purpul_h1">Testimonials
 
-        </h1>
-        <div class="testimonials__purpul__white">
-            <div class="content">
-                <img src="./scss/images/ava.jpg" alt="">
-                <div class="content__text">
-                    <p class="content__text__1">
-                        John Fang 
-                    </p>
-                    <p class="content__text__2">
-                        wordfaang.com
-                    </p>
-                    <p class="content__text__3">
-                        Suspendisse ultrices at diam lectus nullam. 
-Nisl, sagittis viverra enim erat tortor ultricies massa turpis. Arcu pulvinar aenean nam laoreet nulla.
-                    </p>
 
-                </div>
+	<header class="wrapper">
+		<img src="/scss/images/Logo.svg" alt="logo">
+		<nav>
+			<ul class="navbar">
+				<li>
+					<a href="#" class="navbar__link">About</a>
+				</li>
+				<li>
+					<a href="#Help" class="navbar__link">Help</a>
+				</li>
+				<li>
+					<a href="#Features" class="navbar__link">Features</a>
+				</li>
+				<li>
+					<a href="#signup" class="navbar__link">Signup</a>
+				</li>
+			</ul>
+		</nav>
+		<div class="navbar__btn"><button class="navbar__btn"> Request Demo</button></div>
+		<div class="hamburger">
+			<span class="header-hamburger-bar"></span>
+			<span class="header-hamburger-bar"></span>
+			<span class="header-hamburger-bar"></span>
+		</div>
 
-            </div>
-        </div>
+		<script>
+			const hamburger = document.querySelector(".hamburger");
+			const navMenu = document.querySelector(".navbar");
 
-    </div>
+			hamburger.addEventListener("click", mobileMenu);
+
+			function mobileMenu() {
+				hamburger.classList.toggle("active");
+				navMenu.classList.toggle("active");
+			}
+
+
+			const navLink = document.querySelectorAll(".navlink");
+
+			navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+			function closeMenu() {
+				hamburger.classList.remove("active");
+				navMenu.classList.remove("active");
+			}
+		</script>
+
+	</header>
+	<main class="wrapper">
+		<section class="fs">
+			<img src="/scss/images/fs-1.svg" alt="bg-image" class="fs__img">
+			<h1 class="fs__title">Save your data storage here.</h1>
+			<p class="fs__text">
+				Data Warehouse is a data storage area that has been tested for security, so you can store your data
+				here safely but not be afraid of being stolen by others.
+			</p>
+			<button class="fs__btn">Load More</button>
+		</section>
+	</main>
+	<section class="section2">
+		<div class="container">
+			<img class="container-img" src="./scss/images/image2.svg" alt="">
+			<div class="container_items">
+				<h1 class="container_items-h1">We are a high-level
+					data
+					storage bank</h1>
+				<p class="container_items-p">The place to store various data that you can access at any time through
+					the
+					internet and where you can carry it.
+					This very flexible storage area has a high level of security. To enter into your own data you must
+					enter the password that you created when you registered in this Data Warehouse. </p>
+			</div>
+		</div>
+	</section>
+
+	<div class="wrapper-features">
+		<section class="feachures">
+			<div class="feachures__title title">Features</div>
+			<div class="feachures__text text">
+				<p>
+					Some of the features and advantages that we provide for those of you who store data in this Data
+					Warehouse.
+				</p>
+			</div>
+
+			<div class="feachures__block block-features">
+
+				<div class="block-features__item feachures-item feachures-item--one">
+					<div class="feachures-item__image feachures-item__image--one">
+						<img src="./scss/images/image3-1.png" alt="Feachures Icon">
+					</div>
+					<div class="feachures-item__text-block">
+						<div class="feachures-item__title">Search Data</div>
+						<div class="feachures-item__text">
+							<p>
+								Don’t worry if your data is very large, the Data Warehoue provides a search engine, which is
+								useful for making it easier to find data effectively saving time.
+								Don’t worry if your data is very large, the Data Warehoue provides a search engine, which is
+								useful for making it easier to find data effectively saving time.
+								Don’t worry if your data is very large, the Data Warehoue provides a search engine, which is
+								useful for making it easier to find data effectively saving time.
+							</p>
+						</div>
+						<div class="feachures-item__link-block">
+							<a class="feachures-item__link">Learn more</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="block-features__item feachures-item feachures-item--two">
+					<div class="feachures-item__image feachures-item__image--two">
+						<img src="./scss/images/image3-2.png" alt="Feachures Icon">
+					</div>
+					<div class="feachures-item__text-block">
+						<div class="feachures-item__title">24 Hours Access</div>
+						<div class="feachures-item__text">
+							<p>
+								Access is given 24 hours a full morning to night and
+								meet again in the morning, giving you comfort when
+								you need data when urgent.
+							</p>
+						</div>
+						<div class="feachures-item__link-block">
+							<a class="feachures-item__link">Learn more</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="block-features__item feachures-item feachures-item--three">
+					<div class="feachures-item__image feachures-item__image--three">
+						<img src="./scss/images/image3-3.png" alt="Feachures Icon">
+					</div>
+					<div class="feachures-item__text-block">
+						<div class="feachures-item__title">Print Out</div>
+						<div class="feachures-item__text">
+							<p>
+								Print out service gives you convenience if someday
+								you need print data, just edit it all and just print it.
+							</p>
+						</div>
+						<div class="feachures-item__link-block">
+							<a class="feachures-item__link">Learn more</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="block-features__item feachures-item feachures-item--four">
+					<div class="feachures-item__image feachures-item__image--four">
+						<img src="./scss/images/image3-4.png" alt="Feachures Icon">
+					</div>
+					<div class="feachures-item__text-block">
+						<div class="feachures-item__title">Security Code</div>
+						<div class="feachures-item__text">
+							<p>
+								Data Security is one of our best facilities. Allows for your files
+								to be safer. The file can be secured with a code or password that
+								you created, so only you can open the file.
+							</p>
+						</div>
+						<div class="feachures-item__link-block">
+							<a class="feachures-item__link">Learn more</a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</section>
+	</div>
+
+	<div class="wrapper-testimonials">
+		<section class="testimonials">
+			<div class="testimonials__purpul">
+				<h1 class="testimonials__purpul_h1">Testimonials</h1>
+				<div class="testimonials__purpul__white">
+					<div class="content">
+						<img src="./scss/images/ava.jpg" alt="">
+						<div class="content__text">
+							<p class="content__text__1">
+								John Fang
+							</p>
+							<p class="content__text__2">
+								wordfaang.com
+							</p>
+							<p class="content__text__3">
+								Suspendisse ultrices at diam lectus nullam.
+								Nisl, sagittis viverra enim erat tortor ultricies massa turpis. Arcu pulvinar aenean nam
+								laoreet nulla.
+							</p>
+
+						</div>
+
+					</div>
+				</div>
+
+			</div>
 
 </section>
     </div>
