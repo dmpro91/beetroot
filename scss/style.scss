@@ -4,8 +4,8 @@
 @import "./responsive";
 
 .wrapper {
-  width: 1170px;
-  margin: auto;
+  width: 70%;
+  margin: 0 auto;
   @media screen and (max-width: 1200px) {
     width: 95%;
   }
@@ -15,7 +15,7 @@
   font-size: 40px;
   color: $color-blue;
   line-height: 52px;
-  font-family: $font-family, sans-serif;
+  font-family: $font-family;
   font-weight: 700;
 }
 

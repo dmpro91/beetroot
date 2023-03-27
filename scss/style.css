@@ -322,8 +322,8 @@ ol, ul {
 }
 
 .wrapper {
-  width: 1170px;
-  margin: auto;
+  width: 70%;
+  margin: 0 auto;
 }
 @media screen and (max-width: 1200px) {
   .wrapper {
@@ -335,7 +335,7 @@ ol, ul {
   font-size: 40px;
   color: #212353;
   line-height: 52px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-weight: 700;
 }
 
