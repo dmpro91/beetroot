@@ -7,6 +7,7 @@
   width: 210px;
   height: 60px;
   border-radius: 50px;
+  cursor: pointer;
   -webkit-box-shadow: 5px 5px 5px -2px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 5px 5px 5px -2px rgba(0, 0, 0, 0.2);
   box-shadow: 5px 5px 5px -2px rgba(0, 0, 0, 0.2);
@@ -24,12 +25,15 @@
   line-height: 28.8px;
   color: $color-white;
   border: none;
+  cursor: pointer;
 }
 
 @mixin socials-bg-hover {
   background-color: $color-white;
   width: 48px;
   height: 48px;
+  filter: $color-gray;
+  transition: width 2s, height 4s;
 }
 
 .wrapper {
@@ -52,12 +56,8 @@
   font-size: 16px;
   line-height: 25.6px;
   color: $color-blue;
-}
-
-.text {
-  font-size: 18px;
-  color: $color-gray;
-  line-height: 28.8px;
+  font-weight: 600;
+    padding-bottom: 20px;
 }
 
 .button {
@@ -86,7 +86,7 @@
   background-color: $color-purp;
 
   &:hover {
-    background-color: #8a40ee;
+    background-color: $color-purp;
   }
 }
 
@@ -110,6 +110,7 @@
 .button:hover .icon-arrow {
   fill: $color-white;
   stroke: $color-white;
+ 
 }
 
 .footer {
@@ -126,13 +127,11 @@
     }
   }
 
-  h3 {
-    font-weight: 600;
-    padding-bottom: 20px;
-  }
-
   .text {
     padding-top: 20px;
+    font-size: 18px;
+  color: $color-gray;
+  line-height: 28.8px;
   }
 
   &__block {
@@ -189,14 +188,13 @@
       text-decoration: none;
       font-size: 16px;
       line-height: 25.6px;
-      color: $color-gray;
+      color: #4b5d68;
 
       &:hover {
-        color: #8a40ee;
+        color: $color-purp;
       }
     }
   }
-
   &__socials {
     &-block {
       display: flex;
@@ -205,7 +203,7 @@
     }
 
     &-bg {
-      background-color: #e5e5e5;
+      background-color: $icon-back;
       border-radius: 50px;
       width: 50px;
       height: 50px;
@@ -213,33 +211,11 @@
       &--dark {
         &:hover {
           @include socials-bg-hover;
-          border: 1px solid #3b5998;
+          filter: none; 
         }
 
         &:hover .footer__socials-icon--dark {
-          fill: #3b5998;
-        }
-      }
-
-      &--blue {
-        &:hover {
-          @include socials-bg-hover;
-          border: 1px solid #00acee;
-
-          &:hover .footer__socials-icon--blue {
-            fill: #00acee;
-          }
-        }
-      }
-
-      &--pink {
-        &:hover {
-          @include socials-bg-hover;
-          border: 1px solid #c13584;
-
-          &:hover .footer__socials-icon--pink {
-            fill: #c13584;
-          }
+          filter: $color-gray;
         }
       }
     }
@@ -248,8 +224,7 @@
       width: 18px;
       height: 18px;
       padding: 16px;
-      fill: $color-gray;
-      stroke: $color-gray;
+      // display: block;
     }
   }
 
@@ -262,17 +237,6 @@
   }
 }
 
-@media screen and (max-width: 1200px) {
-  .footer {
-    &__block {
-      gap: 180px;
-    }
-
-    &__navigation {
-      gap: 120px;
-    }
-  }
-}
 @media screen and (max-width: 1024px) {
   .footer {
     margin-bottom: 90px;
