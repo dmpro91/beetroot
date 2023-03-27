@@ -128,9 +128,7 @@ a {
   display: flex;
   align-items: center;
   margin-top: 111px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 .allheader__navigation a {
   font-weight: 500;
