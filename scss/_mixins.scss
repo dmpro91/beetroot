@@ -12,4 +12,9 @@
     background-size: auto 100%;
     background-image: $bg-url;
     background-repeat: no-repeat;
+    background-position-y: bottom;
+
+    @include sm {
+      background-size: 100% auto;
+    }
 }
