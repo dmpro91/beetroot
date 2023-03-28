@@ -3,35 +3,33 @@
 @import "./mixins";
 @import "./responsive";
 @import "./footeralona";
+@import "./features-section";
 
 .wrapper {
+	max-width: 1248px;
+	margin: 0 auto;
+	// padding: 0 8%;
 
-    max-width: 1248px;
-    margin: 0 auto;
-    // padding: 0 8%;
-        
-    @include xl {
-            max-width: 1000px;
-        }
-        @include lg {
-            max-width: 800px;
-        }
-        @include md {
-            max-width: 700px;
-        }
-        @include sm {
-            max-width: 500px;
-        }
-        // @media s (max-width: 320px;) {
-        //     max-width: 300px;
+	@include xl {
+		max-width: 1000px;
+	}
+	@include lg {
+		max-width: 800px;
+	}
+	@include md {
+		max-width: 700px;
+	}
+	@include sm {
+		max-width: 500px;
+	}
+	// @media s (max-width: 320px;) {
+	//     max-width: 300px;
 
-        // }
-        
+	// }
 
-  width: 80%;
-  margin: 0 auto;
-  @media screen and (max-width: 1200px) {
-    width: 95%;
-  }
+	width: 80%;
+	margin: 0 auto;
+	@media screen and (max-width: 1200px) {
+		width: 95%;
+	}
 }
-
