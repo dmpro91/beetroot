@@ -4,6 +4,8 @@
 @import "./responsive";
 @import "./footeralona";
 @import "./features-section";
+@import "./header";
+
 
 .wrapper {
 	max-width: 1248px;
@@ -24,7 +26,6 @@
 	}
 	// @media s (max-width: 320px;) {
 	//     max-width: 300px;
-
 	// }
 
 	width: 80%;

@@ -1,0 +1,229 @@
+header {
+    display: flex;
+    min-height: 200px;
+    justify-content: space-between;
+    align-items: center;
+     
+    .navbar {
+        display: inline-flex;
+        @include md {
+            display: none;
+        }
+        @include sm {
+            display: none;
+        }   
+
+        &__link{
+            text-decoration: none;
+            @include blockFonts(16px, $color-blue, 'Avenir');
+            font-weight: 900;
+            line-height: 26px;  
+            padding-left: 45px ;  
+           
+            @include xl {
+                padding-left: 40px ;  
+            }
+
+         }
+         &__link:hover {
+            opacity: 0.7;
+         }
+
+         &__btn {
+            width: 234px;
+            height: 56px;
+            color: $color-wtite;
+            -webkit-box-shadow: 5px 5px 5px -2px rgba(0,0,0,0.2);
+            -moz-box-shadow: 5px 5px 5px -2px rgba(0,0,0,0.2);
+            box-shadow: 5px 5px 5px -2px rgba(0,0,0,0.2);    
+        
+            @include xl {
+                width: 220px;
+            }
+            @include lg {
+                width: 170px;
+            }
+            @include md {
+                width: 200px;
+            }
+            @include sm {
+                width: 170px;
+            }
+        }
+
+        li{
+            @include lg {
+                padding-left: 35px ;  
+            }
+            @include md {
+                margin-bottom: 15px;           
+             }
+        }
+   
+    }
+}
+.header-hamburger-bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+}
+
+.navbar.active {
+    position: relative;
+    z-index: 8;
+    background-color: white;
+    left: 0;
+    top: 130px;
+    @include md {
+        display: block;
+    }
+    @include sm {
+        display: block;
+    }  
+}
+
+.hamburger {
+    display: none;
+    margin-left: 15px;
+    cursor: pointer;
+
+    @include md {
+            display: block;
+    }
+    @include sm {
+        display: block; 
+     }   
+}
+
+.hamburger.active .header-hamburger-bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .header-hamburger-bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .header-hamburger-bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+
+.fs {
+    height: 630px;
+    width: 100%;
+    max-width: 1248px;
+    margin: 0;
+    position: relative;
+    @include xl {
+        height: 600px;
+    }
+    @include lg {
+        height: 520px;
+    }
+    @include md {
+        height: 720px;
+    }
+    @include sm {
+        height: 600px;
+    }
+
+    
+    &__title {
+        @include blockFonts(80px, $color-blue, 'Helvetica');
+        font-weight: 700;
+        line-height: 88px;
+        letter-spacing: 0em; 
+        position: relative;
+        z-index: 2;
+        width: 55%;
+        margin-top: 50px;
+
+        @include xl {
+            @include blockFonts(60px, $color-blue, 'Helvetica');
+            font-weight: 700;
+            line-height: 56px;
+        }
+
+        @include md {
+            @include blockFonts(58px, $color-blue, 'Helvetica');
+            font-weight: 600;
+            line-height: 60px;
+            }
+        @include sm {
+            @include blockFonts(36px, $color-blue, 'Helvetica');
+            font-weight: 600;
+            line-height: 42px;
+            }
+
+    }
+    &__img {
+        width: 70%;
+        position: absolute;
+        top: 27%;
+        left: 25%;
+        z-index: 1;
+
+        @include xl {
+            top: 22%;
+            width: 60%;
+            left: 35%;
+            }
+        @include lg {
+            top: 22%;
+        }
+        @include md {
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+        @include sm {
+            position: relative;
+            top: 0;
+            left: 0;
+
+         }
+    }
+    &__text {
+        position: relative;
+        z-index: 3;
+        width: 25%;
+        margin-top: 50px;
+        @include blockFonts(18px, $color-gray, 'Avenir');
+        font-weight: 500;
+        line-height: 29px;
+
+        @include xl {
+            width: 30%;
+        }
+        @include lg {
+            width: 35%;
+        }
+        @include md {
+            width: 75%;
+        }
+        @include sm {
+            width: 90%;
+        }
+
+    }
+    &__btn {
+        position: relative;
+        @include blockFonts(18px, $color-wtite, Helvetica);
+        height: 60px;
+        width: 170px;
+        background:$color-purp;
+        border-radius: 50px;
+        box-sizing: border-box;
+        border: none;
+        margin-top: 50px;
+    }
+    &__btn:hover {
+        border: 1px solid $color-purp;
+        background:$color-wtite;
+        color: $color-purp; 
+    }
+}
