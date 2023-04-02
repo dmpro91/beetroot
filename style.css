@@ -15,6 +15,10 @@ html {
 /**
  * Remove the margin in all browsers.
  */
+body {
+  font-family: sans-serif;
+}
+
 body, ul, ol {
   margin: 0;
 }
@@ -314,4 +318,8 @@ ol, ul {
 
 * {
   box-sizing: border-box;
+}
+
+* {
+  transition: all 0.2s ease-in;
 }
